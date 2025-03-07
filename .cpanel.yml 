@@ -1,0 +1,5 @@
+---
+deployment:
+    tasks:
+        - export DEPLOYPATH=/home/jmolina/public_html/rookiegaminglab.com
+        - /bin/cp -R *.html *.js *.css *.less *.sass *.jpg *.svg *.png $DEPLOYPATH
