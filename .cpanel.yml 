@@ -1,5 +1,5 @@
 ---
 deployment:
     tasks:
-        - export DEPLOYPATH=/home/jmolina/public_html/rookiegaminglab.com/
+        - export DEPLOYPATH=/home/jmolina/public_html/rookiegaminglab/
         - /bin/cp index.html $DEPLOYPATH
