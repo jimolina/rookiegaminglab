@@ -26,4 +26,3 @@ services:
 networks:
   webnet:
     driver: bridge
-    
