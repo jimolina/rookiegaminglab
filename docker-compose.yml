@@ -11,6 +11,18 @@ services:
     networks:
       - webnet
 
+  sass:
+    image: node:14
+    container_name: sass-compiler
+    volumes:
+      - ./src/assets/scss:/usr/src/assets/scss
+      - ./src/assets/css:/public/assets/css  # Maps CSS to local src
+      - ./public/assets/css:/public/assets/css  # Ensure public CSS is mapped
+    working_dir: /public/assets/css
+    command: sh -c "npm install -g sass && sass --watch /usr/src/assets/scss:/public/assets/css"
+    networks:
+      - webnet
+
 networks:
   webnet:
     driver: bridge
